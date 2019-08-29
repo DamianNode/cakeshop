@@ -1,0 +1,16 @@
+<div class="cake">
+  <div class="cake-image" [ngStyle]="{'background-image': 'url(' + cake.imageUrl + ')'}"></div>
+  <div class="cake-content">
+    <div class="fl">
+      <h1>{{ cake.name }}</h1>
+      <span class="icons">
+        <i class="fa fa-pencil" (click)="openDialog()"></i>
+        <i class="fa fa-times-circle" (click)="remove()"></i>
+      </span>
+    </div>
+
+    <p>{{ cake.description }}</p>
+    <span class="prices prices-left">Liczba porcji <span class="prices-number">{{ cake.numberOfPortion}}</span> </span>
+    <span class="prices prices-right">Cena ciasta <span class="prices-number">{{ cake.cakePrice }}</span> </span>
+  </div>
+</div>

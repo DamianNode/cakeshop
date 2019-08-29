@@ -1,0 +1,308 @@
+
+.app-modal {
+  width: 100%;
+  height: 100%;
+
+  header {
+    background: #C4C4C4 0% 0% no-repeat padding-box;
+    background-color: rgba(196, 196, 196, .1);
+    height: 134px;
+    width: 100%;
+
+    .cake-image {
+      position: relative;
+      top: 25%;
+      left: calc(50% - 90px);
+      width: 180px;
+      height: 180px;
+      border-radius: 50%;
+      border: 3px solid #EBEBEB;
+      background-position: center;
+      background-size: cover;
+      background-color: #FFFFFF;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      //&:after {
+      //  content: "\f2b0";
+      //  font-family: FontAwesome;
+      //  text-align: center;
+      //  line-height: 32px;
+      //  display: block;
+      //  position: absolute;
+      //  right: 0;
+      //  top: 10px;
+      //  height: 32px;
+      //  width: 32px;
+      //  border: 1px solid #FFFFFF;
+      //  border-radius: 50%;
+      //  color: #FFFFFF;
+      //  background: #FFA786 0% 0% no-repeat padding-box;
+      //  z-index: 99999;
+      //}
+    }
+  }
+
+  section {
+    height: calc(100% - 134px - 75px);
+    border-top: 1px solid #C4C4C4;
+    border-bottom: 1px solid #C4C4C4;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+
+    h1 {
+      font: Bold 20px/26px PT Sans;
+      letter-spacing: 0;
+      color: #FFA786;
+    }
+
+    .number-letters {
+      width: 403px;
+      text-align: right;
+      font-size: 12px;
+      letter-spacing: 0.6px;
+      color: #C4C4C4;
+    }
+
+
+    .portion-section {
+      margin-top: 43px;
+      width: 126px;
+      height: 58px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+
+      label {
+        text-align: center;
+        font-size: 12px;
+        font-family: PT Sans;
+        letter-spacing: 1.08px;
+        color: #C4C4C4;
+      }
+
+      .portions {
+        display: flex;
+        justify-content: space-between;
+
+        .portions-number {
+          background: #FFFFFF 0% 0% no-repeat padding-box;
+          border: 0.699999988079071px solid rgba(196, 196, 196, .25);
+          width: 32px;
+          height: 32px;
+          border-radius: 50%;
+          text-align: center;
+
+          font: Bold 18px/23px PT Sans;
+          line-height: 32px;
+          color: #C4C4C4;
+        }
+      }
+    }
+
+    textarea {
+      border: none;
+      overflow: auto;
+      outline: none;
+      -webkit-box-shadow: none;
+      -moz-box-shadow: none;
+      box-shadow: none;
+      resize: none;
+
+      width: 403px;
+      height: 51px;
+      text-align: center;
+      font: Regular 16px/20px PT Sans;
+      letter-spacing: 0.8px;
+      color: #C4C4C4;
+      border-bottom: 1px solid #FFA786;
+    }
+
+    .pricesX {
+      display: flex;
+      justify-content: space-between;
+      width: 200px;
+      margin-top: 52px;
+
+      .price-portion, .price-cake {
+        width: 80px;
+
+        .name {
+          font-size: 10px;
+          letter-spacing: 1.08px;
+          color: #C4C4C4;
+          text-transform: uppercase;
+        }
+
+        span.price {
+          font-size: 15px;
+          letter-spacing: 0;
+          width: 100%;
+          padding: 12px 0;
+
+          text-align: center;
+
+          display: block;
+
+          &.price-cake {
+            color: #C4C4C4;
+          }
+        }
+      }
+    }
+
+  }
+
+  footer {
+    height: 75px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .xxx {
+      width: 167px;
+      height: 45px;
+      background: transparent linear-gradient(to right, #FFDE86 0%, #FF5A1C 100%) 0% 0% no-repeat padding-box;
+      box-shadow: 0 3px 20px #B54600;
+      border-radius: 29px;
+      opacity: 1;
+      font: Bold 14px PT Sans;
+      letter-spacing: 1.12px;
+      color: #FFFFFF;
+      border: 0;
+    }
+  }
+}
+
+.test {
+  border: none;
+  overflow: auto;
+  outline: none;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+  resize: none;
+  font: Bold 20px/26px PT Sans;
+  letter-spacing: 0;
+  color: #FFA786;
+  text-align: center;
+  padding-top: 20px;
+}
+
+.test-textarea {
+  border: none;
+  overflow: auto;
+  outline: none;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+  resize: none;
+
+  width: 403px;
+  height: 51px;
+  text-align: center;
+  font: Regular 16px/20px PT Sans;
+  letter-spacing: 0.8px;
+  color: #C4C4C4;
+  border-bottom: 1px solid #FFA786;
+}
+
+.number-letters {
+  display: block;
+  width: 403px;
+  text-align: right;
+  font-size: 12px;
+  letter-spacing: 0.6px;
+  color: #C4C4C4;
+}
+
+input[type="radio"] {
+  display: none;
+  &:checked {
+    + .box {
+      color: #FFA786;
+      border: 0.7px solid #FFA786;;
+      width: 32px;
+      height: 32px;
+      text-align: center;
+      line-height: 32px;
+      border-radius: 50%;
+      span {
+        color: pink;
+        transform: translateY(70px);
+        &:before {
+          transform: translateY(0px);
+          opacity: 1;
+        }
+      }
+    }
+  }
+}
+
+.portions-number {
+  .box {
+    color: #C4C4C4;
+    border: 0.7px solid rgba(196, 196, 196, .25);
+    width: 32px;
+    height: 32px;
+    text-align: center;
+    line-height: 32px;
+    border-radius: 50%;
+  }
+}
+
+.portion-section {
+  margin-top: 43px;
+  width: 126px;
+  height: 58px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+
+.price {
+  margin:0;
+  border:0;
+  padding:0;
+  display:inline-block;
+  vertical-align:middle;
+  white-space:normal;
+  background:none;
+  line-height:1;
+
+  &::-webkit-inner-spin-button, &::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+}
+
+input[type=number] {
+  -moz-appearance:textfield;
+}
+
+.fa-birthday-cake {
+  font-size: 60px;
+  color: #EBEBEB;
+  z-index: 1;
+}
+
+.imageSpan {
+  text-align: center;
+  line-height: 32px;
+  display: block;
+  position: relative;
+  right: -80px;
+  top: -180px;
+  height: 32px;
+  width: 32px;
+  border: 1px solid #FFFFFF;
+  border-radius: 50%;
+  color: #FFFFFF;
+  background: #FFA786 0% 0% no-repeat padding-box;
+  z-index: 99999;
+  box-sizing: border-box;
+}

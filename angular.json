@@ -62,7 +62,10 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "finalCakeShop:build"
+            "port": 9010,
+            "open": true,
+            "browserTarget": "finalCakeShop:build",
+            "proxyConfig": "api/proxy.conf.json"
           },
           "configurations": {
             "production": {

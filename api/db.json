@@ -1,0 +1,31 @@
+{
+  "cakes": [
+    {
+      "id": 1,
+      "name": "Truskawkowe Smaczne",
+      "imageUrl": "assets/cake1.jpg",
+      "description": "Ciasto z lekkim musem truskawkowym i bitą śmietaną, na czekoladowym spodzie.",
+      "numberOfPortion": 4,
+      "cakePrice": 40,
+      "portionPrice": 10
+    },
+    {
+      "id": 2,
+      "name": "Czekoladowe dobre",
+      "imageUrl": "assets/cake2.jpg",
+      "description": "Ciasto z lekkim musem czekoladowym i bitą śmietaną, na czekoladowym spodzie.\"",
+      "numberOfPortion": 4,
+      "cakePrice": 20,
+      "portionPrice": 5
+    },
+    {
+      "id": 3,
+      "name": "testowe",
+      "imageUrl": "/assets/unknown-cake.png",
+      "description": "test desc",
+      "numberOfPortion": 4,
+      "cakePrice": 4,
+      "portionPrice": 0.5
+    }
+  ]
+}

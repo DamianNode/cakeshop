@@ -1,0 +1,53 @@
+<form class="app-modal" [formGroup]="form" (ngSubmit)="saveData()">
+  <header>
+    <div class="cake-image" [ngStyle]="{'background-image': 'url(' + data?.imageUrl +')', 'z-index': '2' }">
+      <i class="fa fa-birthday-cake"></i>
+    </div>
+  </header>
+  <section>
+    <div class="control-group">
+      <input class="test" type="text" formControlName="name" placeholder="Nazwa ciasta">
+    </div>
+
+    <input
+      style="display: none"
+      type="file" (change)="onFileChanged($event)"
+      #imageUrlRef>
+    <span (click)="imageUrlRef.click()" class="imageSpan"><i class="fa fa-plus"></i></span>
+
+    <div class="control-group">
+      <textarea class="test-textarea" formControlName="description" placeholder="Opis ciasta" #descriptionRef></textarea>
+      <span *ngIf="descriptionRef.value.length" class="number-letters">{{ descriptionRef.value.length }}/250</span>
+    </div>
+
+
+    <div class="control-group portion-section">
+      <label>LICZBA PORCJI</label>
+
+      <div class="portions">
+        <label class="portions-number" *ngFor="let num of numbersOption">
+          <input  type="radio" [id]="num" formControlName="numberOfPortion" [value]="num">
+          <div class="box">
+            <span>{{ num }}</span>
+          </div>
+        </label>
+      </div>
+    </div>
+
+    <div class="pricesX">
+      <div class="price-cake">
+        <label class="name">cena ciasta</label>
+        <input class="price price-cake" type="number" formControlName="cakePrice" placeholder="0">
+      </div>
+      <div class="price-portion">
+        <label class="name">cena porcji</label>
+        <input class="price" type="number" formControlName="portionPrice" placeholder="0" disabled>
+      </div>
+    </div>
+
+  </section>
+  <footer>
+    <button class="xxx" type="submit" [disabled]="form.invalid">Zapisz</button>
+  </footer>
+</form>
+

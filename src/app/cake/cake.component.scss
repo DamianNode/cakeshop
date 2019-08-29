@@ -1,0 +1,93 @@
+.cake {
+  width: 632px;
+  height: 198px;
+  margin: 0 auto;
+  margin-top: 55px;
+  display: flex;
+}
+
+.cake-image {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  border: 3px solid #EBEBEB;
+  background-image: url("../../assets/cake1.jpg");
+  background-position: center;
+  background-size: cover;
+}
+
+.cake-content {
+  width: 403px;
+  height: 133px;
+  float: right;
+  margin-top: 16px;
+  padding-left: 20px;
+
+  p {
+    text-align: left;
+    font: Regular 16px/20px PT Sans;
+    letter-spacing: 0.8px;
+    color: #C4C4C4;
+    margin: 23px 0 16px 0;
+  }
+
+  .prices {
+    font: Regular 12px/15px PT Sans;
+    letter-spacing: 1.08px;
+    color: #C4C4C4;
+
+    &-number {
+      font: Bold 18px/23px PT Sans;
+      letter-spacing: 0;
+      color: #FFA786;
+    }
+  }
+
+  .prices-left {
+    border-right: 1px solid #C4C4C4;
+    padding-right: 14px;
+    margin-right: 14px;
+  }
+
+  .fl {
+    color: #FFA786;
+    text-align: left;
+    font: Bold 20px PT Sans;
+    display: flex;
+    justify-content: space-between;
+
+    .icons {
+      .fa:first-of-type {
+        margin-right: 20px;
+      }
+    }
+  }
+}
+
+.pop-up {
+  position: absolute;
+  right: 0;
+  top: 180px;
+  width: 327px;
+  height: 61px;
+  background: #FFFFFF 0% 0% no-repeat padding-box;
+  box-shadow: 0px 3px 30px #672A2A;
+  border-radius: 6px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  h3 {
+    font: Regular 16px/20px PT Sans;
+    letter-spacing: 1.6px;
+    color: #FFA786;
+  }
+
+  .fa.fa-check {
+    font-size: 36px;
+    font-weight: normal;
+    letter-spacing: 0;
+    color: #FFA786;
+    margin-right: 19px;
+  }
+}

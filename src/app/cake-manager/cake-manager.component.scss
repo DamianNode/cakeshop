@@ -1,0 +1,50 @@
+header {
+  border-bottom: 1px solid #C4C4C4;;
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  height: 114px;
+}
+
+.logo {
+  margin: 20px auto;
+  width: 130px;
+  height: 115px;
+  background: transparent url('../../assets/logo.png') 0% 0% no-repeat padding-box;
+}
+
+.btn {
+  width: 168px;
+  height: 45px;
+  box-shadow: 0 3px 20px #B54600;
+  border-radius: 29px;
+  font: Bold 14px PT Sans;
+  letter-spacing: 1.12px;
+  color: #FFFFFF;
+  opacity: 1;
+  border: 0;
+  text-transform: uppercase;
+
+  .fa-plus {
+    font-size: 26px;
+    position: absolute;
+    left: 14px;
+    top: 9px;
+  }
+}
+
+.btn-large {
+  width: 192px;
+}
+
+.btn-primary {
+  background: transparent linear-gradient(to right, #FFDE86 0%, #FF5A1C 100%) 0% 0% no-repeat padding-box;
+}
+
+.btn-main {
+  position: fixed;
+  bottom: 26px;
+  padding-left: 16px;
+}
