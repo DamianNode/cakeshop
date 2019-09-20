@@ -11,13 +11,15 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatDialogModule } from '@angular/material/dialog';
 import { CakeDialogComponent } from './cake-dialog/cake-dialog.component';
+import { ToastComponent } from './toast/toast.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     CakeManagerComponent,
     CakeComponent,
-    CakeDialogComponent
+    CakeDialogComponent,
+    ToastComponent
   ],
   imports: [
     BrowserModule,
@@ -29,7 +31,7 @@ import { CakeDialogComponent } from './cake-dialog/cake-dialog.component';
     FormsModule,
   ],
   entryComponents: [CakeDialogComponent],
-  providers: [CakeService],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

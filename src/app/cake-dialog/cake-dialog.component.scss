@@ -4,8 +4,7 @@
   height: 100%;
 
   header {
-    background: #C4C4C4 0% 0% no-repeat padding-box;
-    background-color: rgba(196, 196, 196, .1);
+    background: rgba(196, 196, 196, .1) 0 0 no-repeat padding-box;
     height: 134px;
     width: 100%;
 
@@ -23,24 +22,6 @@
       display: flex;
       justify-content: center;
       align-items: center;
-
-      //&:after {
-      //  content: "\f2b0";
-      //  font-family: FontAwesome;
-      //  text-align: center;
-      //  line-height: 32px;
-      //  display: block;
-      //  position: absolute;
-      //  right: 0;
-      //  top: 10px;
-      //  height: 32px;
-      //  width: 32px;
-      //  border: 1px solid #FFFFFF;
-      //  border-radius: 50%;
-      //  color: #FFFFFF;
-      //  background: #FFA786 0% 0% no-repeat padding-box;
-      //  z-index: 99999;
-      //}
     }
   }
 
@@ -54,7 +35,9 @@
     align-items: center;
 
     h1 {
-      font: Bold 20px/26px PT Sans;
+      font-weight: bold;
+      font-family: "PT Sans", sans-serif;
+      font-size: 20px;
       letter-spacing: 0;
       color: #FFA786;
     }
@@ -79,7 +62,7 @@
       label {
         text-align: center;
         font-size: 12px;
-        font-family: PT Sans;
+        font-family: "PT Sans", sans-serif;
         letter-spacing: 1.08px;
         color: #C4C4C4;
       }
@@ -89,14 +72,15 @@
         justify-content: space-between;
 
         .portions-number {
-          background: #FFFFFF 0% 0% no-repeat padding-box;
+          background: #FFFFFF 0 0 no-repeat padding-box;
           border: 0.699999988079071px solid rgba(196, 196, 196, .25);
           width: 32px;
           height: 32px;
           border-radius: 50%;
           text-align: center;
-
-          font: Bold 18px/23px PT Sans;
+          font-weight: bold;
+          font-family: "PT Sans", sans-serif;
+          font-size: 18px;
           line-height: 32px;
           color: #C4C4C4;
         }
@@ -115,7 +99,9 @@
       width: 403px;
       height: 51px;
       text-align: center;
-      font: Regular 16px/20px PT Sans;
+      font-weight: normal;
+      font-family: "PT Sans", sans-serif;
+      font-size: 16px;
       letter-spacing: 0.8px;
       color: #C4C4C4;
       border-bottom: 1px solid #FFA786;
@@ -169,7 +155,9 @@
       box-shadow: 0 3px 20px #B54600;
       border-radius: 29px;
       opacity: 1;
-      font: Bold 14px PT Sans;
+      font-weight: bold;
+      font-family: "PT Sans", sans-serif;
+      font-size: 14px;
       letter-spacing: 1.12px;
       color: #FFFFFF;
       border: 0;
@@ -185,11 +173,13 @@
   -moz-box-shadow: none;
   box-shadow: none;
   resize: none;
-  font: Bold 20px/26px PT Sans;
+  font-weight: bold;
+  font-family: "PT Sans", sans-serif;
+  font-size: 20px;
   letter-spacing: 0;
   color: #FFA786;
   text-align: center;
-  padding-top: 20px;
+  margin-top: 50px;
 }
 
 .test-textarea {
@@ -204,7 +194,9 @@
   width: 403px;
   height: 51px;
   text-align: center;
-  font: Regular 16px/20px PT Sans;
+  font-weight: normal;
+  font-family: "PT Sans", sans-serif;
+  font-size: 16px;
   letter-spacing: 0.8px;
   color: #C4C4C4;
   border-bottom: 1px solid #FFA786;
@@ -296,13 +288,13 @@ input[type=number] {
   display: block;
   position: relative;
   right: -80px;
-  top: -180px;
+  top: -200px;
   height: 32px;
   width: 32px;
   border: 1px solid #FFFFFF;
   border-radius: 50%;
   color: #FFFFFF;
-  background: #FFA786 0% 0% no-repeat padding-box;
+  background: #FFA786 0 0 no-repeat padding-box;
   z-index: 99999;
   box-sizing: border-box;
 }

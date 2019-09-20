@@ -3,13 +3,15 @@
     <div class="logo" routerLink="/"></div>
   </header>
   <main>
+    <app-toast *ngIf="deleteCakeInfo">Usunąłeś ciasto!</app-toast>
+    <app-toast *ngIf="addCakeInfo">Dodałeś ciasto!</app-toast>
     <ul>
       <li>
-        <app-cake *ngFor="let cake of cakes" [cake]="cake" (removeCake)="removeCake(cake.id)"></app-cake>
+        <app-cake *ngFor="let cake of cakes" [cake]="cake" (removeCake)="removeCake(cake.id)" (editCake)="editCake(cake.id)"></app-cake>
       </li>
     </ul>
   </main>
   <footer>
-    <button class="btn btn-large btn-primary btn-main" (click)="openDialog()"><i class="fa fa-plus"></i>dodaj ciasto</button>
+    <button class="btn btn-large btn-primary btn-main" (click)="createCake()"><i class="fa fa-plus"></i>dodaj ciasto</button>
   </footer>
 </div>

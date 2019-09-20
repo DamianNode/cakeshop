@@ -1,7 +1,7 @@
-import { Component, Inject, OnInit } from '@angular/core';
+import { Component, EventEmitter, Inject, OnInit, Output } from '@angular/core';
 import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material';
-import { FormControl, FormGroup } from '@angular/forms';
-import { CakeService } from '../services/cake-list.service';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { Cake } from '../models/cake';
 
 @Component({
   selector: 'app-cake-dialog',
@@ -11,50 +11,36 @@ import { CakeService } from '../services/cake-list.service';
 export class CakeDialogComponent implements OnInit {
   form: FormGroup;
   numbersOption: number[] = [4, 8, 12];
-  selectedFile?: File;
+  selectedFile?: string;
+  @Output() newCake = new EventEmitter<Cake>();
 
   constructor(public dialogRef: MatDialogRef<CakeDialogComponent>,
-              @Inject(MAT_DIALOG_DATA) public data: any,
-              private cakeService: CakeService) { }
+              @Inject(MAT_DIALOG_DATA) public data: any) { }
 
   ngOnInit() {
-    if (this.data) {
       this.form = new FormGroup({
         id: new FormControl(this.data.id),
-        name: new FormControl(this.data.name),
+        name: new FormControl(this.data.name, [Validators.required]),
         imageUrl: new FormControl(this.data.imageUrl),
         description: new FormControl(this.data.description),
-        numberOfPortion: new FormControl(this.data.numberOfPortion),
-        cakePrice: new FormControl(this.data.cakePrice),
-        portionPrice: new FormControl(this.data.portionPrice)
+        numberOfPortion: new FormControl(this.data.numberOfPortion, [Validators.required]),
+        cakePrice: new FormControl(this.data.cakePrice, [Validators.required]),
+        portionPrice: new FormControl({value: 0, disabled: true}, [Validators.required])
       });
-    } else {
-      this.form = new FormGroup({
-        id: new FormControl(),
-        name: new FormControl(),
-        imageUrl: new FormControl(),
-        description: new FormControl(),
-        numberOfPortion: new FormControl(),
-        cakePrice: new FormControl(),
-        portionPrice: new FormControl()
-      });
-    }
   }
 
   save() {
     this.dialogRef.close();
-    this.cakeService.getCakes();
   }
 
   saveData() {
     const cakeAttrs = this.form.value;
-    this.cakeService.saveCake(cakeAttrs).subscribe(
-      () => this.save(),
-      () => alert('Nie udało się zapisać pilota!')
-    );
+    cakeAttrs.imageUrl = this.selectedFile;
+    this.newCake.emit(cakeAttrs);
+    this.save();
   }
 
   onFileChanged(file) {
-    this.selectedFile = file.target.files[0].name;
+    this.selectedFile = `assets/${file.target.files[0].name}`;
   }
 }

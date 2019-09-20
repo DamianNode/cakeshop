@@ -19,7 +19,7 @@ export class Cake {
   cakePrice: number;
   portionPrice: number;
 
-  constructor(attrs: Partial<CakeAttrs> = {}) {
+  constructor(attrs: Partial<CakeAttrs> = {portionPrice: 0}) {
     this.id = attrs.id;
     this.name = attrs.name;
     this.imageUrl = attrs.imageUrl || Cake.defaultImageUrl;

@@ -1,0 +1,26 @@
+.toast {
+  position: absolute;
+  top: 180px;
+  right: 18px;
+  width: 327px;
+  height: 61px;
+  box-shadow: 0 3px 30px #672A2A31;
+  border-radius: 6px;
+  color: #FFA786;
+  display: flex;
+  align-items: center;
+
+  i {
+    letter-spacing: 0;
+    font-size: 36px;
+    margin-left: 23px;
+    margin-right: 19px;
+  }
+
+  .info {
+    font-weight: normal;
+    font-size: 16px;
+    letter-spacing: 1.6px;
+    text-transform: uppercase;
+  }
+}

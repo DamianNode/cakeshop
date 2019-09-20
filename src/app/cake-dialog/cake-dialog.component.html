@@ -1,7 +1,7 @@
 <form class="app-modal" [formGroup]="form" (ngSubmit)="saveData()">
   <header>
-    <div class="cake-image" [ngStyle]="{'background-image': 'url(' + data?.imageUrl +')', 'z-index': '2' }">
-      <i class="fa fa-birthday-cake"></i>
+    <div class="cake-image" [ngStyle]="{'background-image': 'url(' + data?.imageUrl + ')', 'z-index': '2' }">
+      <i *ngIf="!data?.imageUrl" class="fa fa-birthday-cake"></i>
     </div>
   </header>
   <section>
@@ -13,6 +13,7 @@
       style="display: none"
       type="file" (change)="onFileChanged($event)"
       #imageUrlRef>
+    <input style="display: none" type="text" formControlName="imageUrl" [value]="selectedFile">
     <span (click)="imageUrlRef.click()" class="imageSpan"><i class="fa fa-plus"></i></span>
 
     <div class="control-group">
@@ -41,7 +42,7 @@
       </div>
       <div class="price-portion">
         <label class="name">cena porcji</label>
-        <input class="price" type="number" formControlName="portionPrice" placeholder="0" disabled>
+        <input class="price" type="number" formControlName="portionPrice" placeholder="0">
       </div>
     </div>
 
